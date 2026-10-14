@@ -23,3 +23,9 @@ Currently, this repository relies purely on standard Python and `numpy` for core
 *   **RBF Networks:** A non-linear classifier that leverages K-Means to identify representative centers, constructs a design matrix using a Radial Basis Function kernel, and utilizes the Moore-Penrose pseudo-inverse for weight optimization. 
 
 *Tested against the scikit-learn SVM implementation on non-linear data.*
+
+### 3. Regularization & Model Evaluation (`03_polynomial_lasso_and_nested_cv.ipynb`)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Mogi21/ml-algorithms-from-scratch/blob/main/03_polynomial_lasso_and_nested_cv.ipynb)
+*   **Polynomial Features:** Custom polynomial expansion logic to capture non-linear relationships in raw datasets.
+*   **Lasso Regression (Coordinate Descent):** Ground-up implementation of L1 regularization using a Coordinate Descent optimization algorithm and soft-thresholding to induce sparsity.
+*   **Nested Cross-Validation:** A rigorously constructed double-loop validation pipeline (K-Fold). The inner loop handles hyperparameter tuning ($\alpha$ penalty), while the outer loop provides an unbiased estimate of the model's true generalization error.
